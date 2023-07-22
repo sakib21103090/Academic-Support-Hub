@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Body-Background{
+  background: linear-gradient(#24144c, #6d459A,#AA436F,#c53998,#7221D6);
+
+}
+
+.bg-nav{
+  background: #24144c;
+}
+.bg-btn-nav{
+  background:#6d459A ;
+}
+.bg-academy{
+  background: linear-gradient(180deg,  #8758F1 40%, #ffffff 60%);
+  color: transparent;
+  -webkit-background-clip: text;
+ 
+  
+}
+.btn-nav{
+  background: linear-gradient( #6d459A,#c53998,#7221D6);
+
+}
