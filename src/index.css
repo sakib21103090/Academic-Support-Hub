@@ -20,6 +20,13 @@
  
   
 }
+.bg-title{
+  background: linear-gradient(180deg,  #8758F1 40%, #1505eb 60%);
+  color: transparent;
+  -webkit-background-clip: text;
+ 
+  
+}
 .btn-nav{
   background: linear-gradient( #6d459A,#c53998,#7221D6);
 
