@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: Arial, sans-serif;
+}
 .Body-Background{
   background: linear-gradient(#24144c, #6d459A,#AA436F,#c53998,#7221D6);
 
+}
+.d-Background {
+  background: linear-gradient(#185ae7, #70c1f0,#3d7bee,#0b53d8,#4e73eb);
 }
 
 .bg-nav{

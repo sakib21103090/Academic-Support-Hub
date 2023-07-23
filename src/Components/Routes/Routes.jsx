@@ -5,6 +5,9 @@ import Error from "../Error/Error";
 import Colleges from "../Pages/Colleges/Colleges";
 import Admission from "../Pages/Admission/Admission";
 import MyCollege from "../Pages/MyCollege/MyCollege";
+import Details from "../Pages/Home/PopularColleges/Details/Details";
+import Login from "../Pages/UserLogin/Login/Login";
+import SignUp from "../Pages/UserLogin/SignUp/SignUp";
 
 
 
@@ -24,6 +27,11 @@ const router = createBrowserRouter([
             element :<Colleges></Colleges>,
         },
         {
+            path : 'details/:id',
+            element :<Details></Details>,
+            loader: ({params}) => fetch(`http://localhost:5000/popularCollegeData/${params.id}`)
+        },
+        {
             path : 'admission',
             element :<Admission></Admission>,
         },
@@ -31,6 +39,15 @@ const router = createBrowserRouter([
             path : 'myCollege',
             element :<MyCollege></MyCollege>,
         },
+        {
+            path : '/login',
+             element : <Login></Login>
+            
+            },
+            {
+                path : '/SignUp',
+                  element : <SignUp></SignUp>
+              },
       ]
     }
 ]);

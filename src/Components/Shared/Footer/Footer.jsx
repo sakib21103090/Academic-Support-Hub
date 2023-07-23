@@ -6,7 +6,7 @@ import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg
 const Footer = () => {
     return (
         <footer className="w-full h-[300px] bg-nav text-white">
-      <div className="container mx-auto py-8 px-4">
+      <div className="container mx-auto py-8  px-4">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center">
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl font-bold">Academic SupportHub</h3>

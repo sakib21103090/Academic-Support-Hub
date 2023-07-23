@@ -11,7 +11,7 @@ const Gallery = () => {
     return (
         <div>
             <div>
-                <h4 className=" bg-title font-bold  text-3xl mx-auto text-center mt-14 mb-14   "> Graduates Student group pictures</h4>
+                <h4 className=" bg-title font-bold  text-3xl mx-auto text-center mt-12 mb-20   "> Graduates Student group pictures</h4>
             </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-4">
         <div className="aos-item" data-aos="fade-up">

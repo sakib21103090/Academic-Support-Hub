@@ -1,17 +1,33 @@
+import { useEffect, useState } from "react";
+import CollegesCard from "./CollegesCard";
+
 const Colleges = () => {
+  const [CollegeData, setCollegeData] = useState([]);
+  
+
+    useEffect(() => {
+        fetch('http://localhost:5000/CollegeData')
+            .then(res => res.json())
+
+            .then((data) => {
+                
+                setCollegeData(data);
+              });
+    }, [])
     return (
+      <section>
         <div>
-           <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-        </div>
+            <h4 className="text-center bg-title font-bold text-3xl  mb-2 pt-24">All Colleges </h4>
+            </div>
+         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 m-4 gap-4">
+          {
+                 CollegeData?.map(colleges => <CollegesCard
+                    key={colleges._id}
+                    colleges={colleges}
+                 ></CollegesCard>)
+              }
+         </div>
+     </section>
     );
 };
 
