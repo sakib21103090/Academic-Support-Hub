@@ -6,7 +6,7 @@ const Colleges = () => {
   
 
     useEffect(() => {
-        fetch('http://localhost:5000/CollegeData')
+        fetch('https://academic-support-hub-server.vercel.app/CollegeData')
             .then(res => res.json())
 
             .then((data) => {

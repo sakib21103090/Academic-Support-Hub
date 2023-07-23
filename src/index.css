@@ -51,7 +51,7 @@ body {
 }
 
 
-/*  card button style */
+ /* card button style */
   .c-btn {
     padding: 6px 16px;
     border: none;
@@ -76,3 +76,9 @@ body {
     background-color: #3a033f; 
   }
 /*  card button style */
+.bg-s{
+  position: absolute;
+  top:0px;
+  right: 0px;
+  padding-top: 80px;
+}

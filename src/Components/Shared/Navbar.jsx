@@ -1,6 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const {user,logOut}=useContext(AuthContext);
+  const handleLogOut = () => {
+      logOut()
+          .then()
+          .catch(error => console.log(error));
+  }
     return (
         
             <div className="navbar bg-nav fixed z-10 bg-opacity-30 ">
@@ -16,8 +24,8 @@ const Navbar = () => {
             <li><Link className='text-black-300' to="/myCollege">My College</Link> </li>
             
             <div className=" navbar-end">
-          {/* {user && <img className='rounded-full w-[30px] md:m-4' src={user.photoURL}  /> }
-           {user ? <button onClick={handleLogOut} className="btn btn-outline bg-lime-100 md:m-4">Log Out</button>:<Link to="/login" className="btn btn-success bg-lime-100 md:mx-4">Login</Link> } */}
+          {user && <img className='rounded-full w-[30px] md:m-4' src={user.photoURL}  /> }
+           {user ? <button onClick={handleLogOut} className="c-btn">Log Out</button>:<Link to="/login" className="c-btn md:mx-4">Login</Link> }
         </div>
               
             
@@ -34,14 +42,20 @@ const Navbar = () => {
             <li><NavLink className='text-black-300 text-bold text-white ' to="/admission">Admission</NavLink> </li>
             <li><NavLink className='text-black-300 text-bold text-white ' to="/myCollege">My College</NavLink> </li>
           </ul>
+          <div className="hidden md:block ">
+          {user ? <button onClick={handleLogOut} className="c-btn md:m-2">Log Out</button>:<NavLink to="/login" className="c-btn md:mx-4">Login</NavLink> }
+          </div>
         </div>
         <div>     
         </div>
-        <div className=" navbar-end">
-          {/* {user && <img className='rounded-full w-[30px] md:m-4' src={user.photoURL}  /> }
-           {user ? <button onClick={handleLogOut} className="btn btn-outline bg-lime-100 md:m-4">Log Out</button>:<NavLink to="/login" className="btn btn-success bg-lime-100 md:mx-4">Login</NavLink> } */}
+        <div className=" navbar-end  ">
+          <div className="hidden md:block">
+          {user && <img className='rounded-full w-[40px] md:m-2' src={user.photoURL}  /> }
         </div>
-      </div>
+        
+        </div>
+        </div>
+     
      
     );
 };

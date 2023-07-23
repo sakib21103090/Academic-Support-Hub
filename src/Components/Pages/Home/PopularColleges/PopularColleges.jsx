@@ -5,7 +5,7 @@ const PopularColleges = () => {
     const [popularCollegeData, setCollegeData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/popularCollegeData')
+        fetch('https://academic-support-hub-server.vercel.app/popularCollegeData')
             .then(res => res.json())
 
             .then((data) => {

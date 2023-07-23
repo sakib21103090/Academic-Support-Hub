@@ -10,6 +10,9 @@ const Banner = () => {
         />
   
         {/* Overlay with text */}
+         <div >
+          
+        </div>
          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center">
         <div className="text-white text-left p-8">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold">Welcome To</h1>
