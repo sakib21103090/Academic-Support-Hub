@@ -13,6 +13,7 @@ const PopularCollegeCard = ({college}) => {
           <p className="bg-ptag">Research History: {research_count}</p>
           <p className="bg-ptag">Sports: {sport_name}</p>
           <p className="bg-ptag">Rating: {college_rating}</p>
+          <button className=" c-btn">Details</button>
         </div>
       </div>
     
