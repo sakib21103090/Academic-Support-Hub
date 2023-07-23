@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
 import { AuthContext } from '../../../Providers/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 
 const SignUp = () => {
@@ -38,6 +39,9 @@ const SignUp = () => {
     return (
      
         <div>
+            <Helmet>
+        <title>Academic SupportHub | SignUp </title>
+      </Helmet>
             <div className="hero min-h-screen pt-16 Body-Background ">
     <div className="hero-content flex-col lg:flex-row">
         <div className="w-1/2 mr-12">

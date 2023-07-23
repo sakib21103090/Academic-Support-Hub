@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import CollegesCard from "./CollegesCard";
-
+import { Helmet } from 'react-helmet';
 const Colleges = () => {
   const [CollegeData, setCollegeData] = useState([]);
   
@@ -16,6 +16,9 @@ const Colleges = () => {
     }, [])
     return (
       <section>
+        <Helmet>
+        <title>Academic SupportHub | colleges </title>
+      </Helmet>
         <div>
             <h4 className="text-center bg-title font-bold text-3xl  mb-2 pt-24">All Colleges </h4>
             </div>

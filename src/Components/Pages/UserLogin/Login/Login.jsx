@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.css';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import GoogleLogin from '../GoogleLogin';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
     const [error ,setError]=useState('');
@@ -45,9 +46,9 @@ const Login = () => {
     return (
         <div>
             
-            {/* <Helmet>
-        <title>Animal-Toy-planet |Login</title>
-      </Helmet> */}
+            <Helmet>
+        <title>Academic SupportHub | Login </title>
+      </Helmet>
             <div className="hero Body-Background min-h-screen pt-16">
             <div className="hero-content flex-col lg:flex-row">
                 <div className="w-1/2 mr-12">
