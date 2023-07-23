@@ -1,19 +1,36 @@
-// import React from 'react';
+import  { useEffect, useState } from 'react';
+import PopularCollegeCard from './PopularCollegeCard';
 
-// const PopularColleges = ({ collegeData }) => {
-//     const { image, name, admissionDates, events, researchHistory, sports } = collegeData;
-//     return (
-//         <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-//       <img className="w-full h-48 object-cover object-center" src={image} alt={name} />
-//       <div className="py-4 px-6">
-//         <h2 className="text-2xl font-semibold">{name}</h2>
-//         <p className="text-gray-600">Admission Dates: {admissionDates}</p>
-//         <p className="text-gray-600">Events: {events}</p>
-//         <p className="text-gray-600">Research History: {researchHistory}</p>
-//         <p className="text-gray-600">Sports: {sports}</p>
-//       </div>
-//     </div>
-//     );
-// };
+const PopularColleges = () => {
+    const [popularCollegeData, setCollegeData] = useState([]);
 
-// export default PopularColleges;
+    useEffect(() => {
+        fetch('http://localhost:5000/popularCollegeData')
+            .then(res => res.json())
+
+            .then((data) => {
+                
+                setCollegeData(data);
+              });
+    }, [])
+    
+   
+    return (
+     <section>
+        <div>
+            <h4 className="text-center bg-title font-bold text-black text-3xl m-6 p-6"> Popular Colleges </h4>
+            </div>
+         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 m-4 gap-4">
+          {
+                 popularCollegeData?.map(college => <PopularCollegeCard
+                    key={college._id}
+                    college={college}
+                 ></PopularCollegeCard>)
+              }
+         </div>
+     </section>
+  
+    );
+};
+
+export default PopularColleges;

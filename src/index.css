@@ -21,7 +21,14 @@
   
 }
 .bg-title{
-  background: linear-gradient(180deg,  #8758F1 40%, #1505eb 60%);
+  background: linear-gradient(180deg, #a3216f 40%, #5b1af1 60%);
+  color: transparent;
+  -webkit-background-clip: text;
+ 
+  
+}
+.bg-ptag{
+  background: linear-gradient(180deg, #481de0 40%, #130605 60%);
   color: transparent;
   -webkit-background-clip: text;
  
@@ -29,5 +36,16 @@
 }
 .btn-nav{
   background: linear-gradient( #6d459A,#c53998,#7221D6);
+
+}
+.college-image {
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+}
+.style-btn{
+  background-color:#6f0191 ;
+  width: 45%; 
+  height: 7px;
 
 }
