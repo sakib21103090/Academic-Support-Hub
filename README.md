@@ -1,7 +1,7 @@
   # Academic-SupporHub
   #live link : https://academic-support-hub.web.app/
 
-   # Use Feature of Animal-Toys-Planet
+   # Use Feature of Academic-SupporHub
  - React
  - React Router Dom
  - Tailwind
